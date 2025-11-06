@@ -8,7 +8,6 @@ import {
     Shield,
     Zap,
     Users,
-    LucideIcon,
 } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
 
@@ -52,16 +51,16 @@ export default function Home() {
                     Trusted by thousands of users worldwide
                 </p>
                 <div className="flex justify-center items-center gap-15 text-muted-foreground">
-                    <div className="text-center">
-                        <div className="text-2xl font-bold text-foreground">50K+</div>
-                        <div className="text-sm">Active Users</div>
-                    <div className="w-px h-8 bg-border"></div>
-                    <div className="text-center">
+                    <div className="text-center flex flex-col">
+                        <div className="text-2xl font-bold text-foreground ">50K+</div>
+                        <div className="text-sm ">Active Users</div>
+                    <div className="w-px h-8 "></div>
+                    <div className="text-center flex flex-col">
                         <div className="text-2xl font-bold text-foreground">1M+</div>
                         <div className="text-sm">Messages Sent</div>
                     </div>
-                    <div className="w-px h-8 bg-border"></div>
-                    <div className="text-center">
+                    <div className="w-px h-8"></div>
+                    <div className="text-center flex flex-col">
                         <div className="text-2xl font-bold text-foreground">99.9%</div>
                         <div className="text-sm">Uptime</div>
                     </div>
