@@ -36,4 +36,20 @@ export const upsertUser = mutation({
         return existingUser._id;
     }
     return await ctx.db.insert("users", {userId, name, email, imageUrl})
+}});
+
+//search users by name/email
+export const searchUser = query({
+    args:{searchTerm : v.string()},
+    handler: async (ctx, {searchTerm})=>{
+        if(!searchTerm.trim()) return [];
+        const normalisedSearch = searchTerm.toLowerCase().trim();
+
+        const allUsers = await ctx.db.query("users").collect();
+
+        return allUsers.filter(
+            (user)=> user.name.toLowerCase().includes(normalisedSearch) || user.email.toLowerCase().includes(normalisedSearch)
+        )
+            .slice(0,20);
+    },
 });

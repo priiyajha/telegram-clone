@@ -1,8 +1,7 @@
-import React from 'react'
-
-function Dashboard() {
+'use client';
+function Dashboard({children}:{children: React.ReactNode}) {
     return (
-        <div>Dashboard</div>
+        <UserSyncWrapper>{children}</UserSyncWrapper>
     )
 }
 
