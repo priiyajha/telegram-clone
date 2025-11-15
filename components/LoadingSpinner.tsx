@@ -6,11 +6,11 @@ className?: string;
 showMessage?: boolean;
 }
 export function LoadingSpinner ({
-                                    size = "md",
-                                    message = "Loading...",
-                                    className,
-                                    showMessage = true,
-                                }: LoadingSpinnerProps) {
+    size = "md",
+    message = "Loading...",
+    className,
+    showMessage = true,
+    }: LoadingSpinnerProps) {
     const sizeClasses = {
         sm: "w-4 h-4 border-2",
         md: "w-6 h-6 border-2",
@@ -20,7 +20,7 @@ export function LoadingSpinner ({
         sm: "min-h-[60px]",
         md: "min-h-[80px]",
         lg: "min-h-[100px]",
-    }
+    };
     return(
         <div className={cn(
             "flex flex-col items-center justify-center",

@@ -2,7 +2,8 @@
 import {useUser} from "@clerk/nextjs";
 import {useState} from "react";
 import {useMutation} from "convex/react";
-import { api } from "@convex/_generated/api";
+import {api} from "@convex/_generated/api";
+import {LoadingSpinner} from "@/components/LoadingSpinner";
 function UserSyncWrapper({children}:{children: React.ReactNode}) {
 
     const [user, isLoaded: isUserLoaded] = useUser();
